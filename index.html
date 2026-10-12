@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>蔡俊荣 · 企业信息化 × AI 应用</title>
+<meta name="description" content="蔡俊荣：十余年企业信息化建设经验，专注系统落地与 AI 应用实践。">
+<style>
+:root{--t:#2C2C2B;--t2:#7D7A75;--bg:#fff;--s:#F9F8F7;--s2:#F0EFED;--b:#E6E5E3;--a:#2783DE;--as:#E5F2FC;--g:#46A171;--gs:#E8F1EC;--o:#D5803B;--os:#FBEBDE}
+@media (prefers-color-scheme:dark){:root{--t:#fff;--t2:rgba(255,255,255,.65);--bg:#191919;--s:#202020;--s2:#2a2a29;--b:rgba(255,255,255,.18);--a:#5E9FE8;--as:rgba(94,159,232,.12);--g:#72BC8F;--gs:rgba(114,188,143,.12);--o:#DE9255;--os:rgba(222,146,85,.12)}}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{font:16px/1.6 -apple-system,BlinkMacSystemFont,"PingFang SC","Noto Sans SC","Microsoft YaHei",sans-serif;color:var(--t);background:var(--bg)}
+a{color:var(--a);text-decoration:none}a:hover{text-decoration:underline}
+a:focus-visible{outline:2px solid var(--a);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 32px}
+nav{position:sticky;top:0;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--b);z-index:10}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;height:60px}
+.logo{font-weight:700;color:var(--t)}
+nav ul{display:flex;gap:4px;list-style:none}
+nav ul a{color:var(--t2);font-size:15px;padding:10px 12px;display:inline-block}
+nav ul a:hover{color:var(--t);text-decoration:none}
+section{padding:72px 0;border-bottom:1px solid var(--b)}
+.hero{padding:96px 0 80px}
+.eyebrow{color:var(--a);font-weight:600;font-size:14px;letter-spacing:.04em;margin-bottom:16px}
+h1{font-size:44px;line-height:1.2;font-weight:700;letter-spacing:-.01em;max-width:760px}
+h1 span{color:var(--t2);font-weight:500}
+.lead{font-size:18px;color:var(--t2);max-width:680px;margin-top:20px}
+.cta{display:flex;gap:12px;margin-top:32px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;min-height:44px;padding:0 20px;border-radius:8px;font-weight:600;font-size:15px;border:1px solid var(--b);color:var(--t)}
+.btn.p{background:var(--t);color:var(--bg);border-color:var(--t)}
+.btn:hover{text-decoration:none;opacity:.88}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:64px}
+.stat{padding:20px;background:var(--s);border-radius:12px}
+.stat b{display:block;font-size:28px;line-height:1.2}
+.stat span{font-size:14px;color:var(--t2)}
+h2{font-size:28px;line-height:1.3;margin-bottom:8px}
+.sub{color:var(--t2);margin-bottom:40px}
+.skills{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.skill{border:1px solid var(--b);border-radius:12px;padding:24px}
+.skill h3{font-size:17px;margin-bottom:8px}
+.skill p{color:var(--t2);font-size:15px}
+.tabs{display:flex;gap:8px;margin-bottom:24px}
+.tab{min-height:44px;padding:0 16px;border-radius:8px;border:1px solid var(--b);background:var(--bg);color:var(--t2);font:inherit;font-size:15px;cursor:pointer}
+.tab[aria-selected=true]{background:var(--t);color:var(--bg);border-color:var(--t)}
+.tab:focus-visible{outline:2px solid var(--a);outline-offset:2px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.card{background:var(--s);border-radius:12px;padding:24px;display:flex;flex-direction:column;gap:12px}
+.card h3{font-size:18px;line-height:1.35}
+.card p{font-size:15px;color:var(--t2);flex:1}
+.tag{align-self:flex-start;font-size:13px;font-weight:600;padding:2px 8px;border-radius:6px}
+.tag.ai{background:var(--as);color:var(--a)}.tag.ent{background:var(--gs);color:var(--g)}.tag.wip{background:var(--os);color:var(--o)}
+.metric{font-size:14px;font-weight:600;color:var(--t);border-top:1px solid var(--b);padding-top:12px}
+.hidden{display:none}
+.tl{list-style:none;border-left:2px solid var(--b);margin-left:6px}
+.tl li{position:relative;padding:0 0 32px 28px}
+.tl li:last-child{padding-bottom:0}
+.tl li::before{content:"";position:absolute;left:-7px;top:7px;width:12px;height:12px;border-radius:50%;background:var(--bg);border:2px solid var(--a)}
+.tl .when{font-size:14px;color:var(--t2)}
+.tl h3{font-size:17px;margin:2px 0 4px}
+.tl p{font-size:15px;color:var(--t2);max-width:700px}
+.flow{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:32px}
+.flow span{padding:8px 14px;border:1px solid var(--b);border-radius:8px;font-size:15px}
+.flow i{color:var(--t2);font-style:normal}
+.flow span.now{border-color:var(--a);color:var(--a);font-weight:600}
+.tools{display:flex;flex-wrap:wrap;gap:8px}
+.tools span{background:var(--s2);padding:6px 12px;border-radius:6px;font-size:14px}
+.contact{text-align:center;border-bottom:none;padding:88px 0}
+.contact .lead{margin:16px auto 32px}
+.contact .cta{justify-content:center}
+footer{text-align:center;color:var(--t2);font-size:14px;padding:24px 0 40px}
+@media (max-width:860px){.grid{grid-template-columns:repeat(2,1fr)}.stats{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:600px){.wrap{padding:0 20px}nav ul{display:none}h1{font-size:32px}.lead{font-size:17px}.hero{padding:64px 0 56px}section{padding:56px 0}.grid,.skills{grid-template-columns:1fr}.stats{margin-top:48px;gap:12px}.stat{padding:16px}.stat b{font-size:24px}h2{font-size:24px}}
+</style>
+</head>
+<body>
+<nav aria-label="主导航"><div class="wrap">
+  <a class="logo" href="#top">蔡俊荣</a>
+  <ul><li><a href="#about">能力</a></li><li><a href="#projects">项目</a></li><li><a href="#exp">经历</a></li><li><a href="#ai">AI 实践</a></li><li><a href="#contact">联系</a></li></ul>
+</div></nav>
+
+<main id="top">
+<section class="hero"><div class="wrap">
+  <p class="eyebrow">企业信息化 × AI 应用</p>
+  <h1>把技术方案，落成<br>稳定可用的业务系统。</h1>
+  <p class="lead">我是蔡俊荣，十余年企业信息化建设经验，覆盖港口物流与设备制造。现在，我把同样的落地能力用在 AI 应用上——从企业知识库问答，到帮孩子整理错题的学习产品。</p>
+  <div class="cta"><a class="btn p" href="#projects">看看项目</a><a class="btn" href="mailto:736086564@qq.com">发邮件联系</a></div>
+  <div class="stats">
+    <div class="stat"><b>10+ 年</b><span>企业信息化经验</span></div>
+    <div class="stat"><b>200 人</b><span>OA 平台覆盖全员</span></div>
+    <div class="stat"><b>1000+</b><span>小程序注册用户</span></div>
+    <div class="stat"><b>3000+</b><span>安全题库题目沉淀</span></div>
+  </div>
+</div></section>
+
+<section id="about"><div class="wrap">
+  <h2>我能做什么</h2>
+  <p class="sub">连接业务需求、管理目标与技术方案，让系统真正用起来。</p>
+  <div class="skills">
+    <div class="skill"><h3>企业信息化落地</h3><p>需求梳理、方案设计、项目实施、系统集成、上线运维与持续优化，经历自研系统到成熟产品二开的完整链路。</p></div>
+    <div class="skill"><h3>技术与平台</h3><p>Java / Python / Node.js / Vue，Oracle / SQL Server，泛微 OA 实施与二次开发，微信小程序。</p></div>
+    <div class="skill"><h3>跨部门协同</h3><p>与财务、销售、资产、安全等业务部门共建流程，把分散的线下事务变成可追踪的线上闭环。</p></div>
+    <div class="skill"><h3>AI 应用实践</h3><p>用 Claude Code、Codex 等工具辅助开发；搭建知识库、AI 工作流与 Skill，探索 Agent 在工作与家庭中的真实用法。</p></div>
+  </div>
+</div></section>
+
+<section id="projects"><div class="wrap">
+  <h2>精选项目</h2>
+  <p class="sub">企业系统看结果，AI 项目看思考。</p>
+  <div class="tabs" role="tablist" aria-label="项目分类">
+    <button class="tab" role="tab" aria-selected="true" data-f="all">全部</button>
+    <button class="tab" role="tab" aria-selected="false" data-f="ai">AI 实践</button>
+    <button class="tab" role="tab" aria-selected="false" data-f="ent">企业系统</button>
+  </div>
+  <div class="grid">
+    <article class="card" data-c="ai"><span class="tag wip">验证中</span><h3>问隅爱学 · 小学学习 AI 产品</h3><p>从孩子的真实错题出发，设计“预习 → 理解 → 错题 → 巩固 → 复盘”闭环：错因识别、前置知识链回溯、变式练习。</p><div class="metric">Next.js · TypeScript · PWA · LLM</div></article>
+    <article class="card" data-c="ai"><span class="tag ai">AI 实践</span><h3>企业知识库问答</h3><p>基于大模型让员工自助获取制度、流程与系统使用知识，借助 AI 编程工具快速迭代原型。</p><div class="metric">原型验证阶段</div></article>
+    <article class="card" data-c="ai"><span class="tag ai">AI 实践</span><h3>AI 小作品</h3><p>诗画同源古诗词 H5、TeamAi 桌面客户端、Skill 注册管理，以及你正在看的这个官网——都由我借助 AI 独立完成并开源。</p><div class="metric"><a href="https://github.com/littlejcai">GitHub · littlejcai →</a></div></article>
+    <article class="card" data-c="ent"><span class="tag ent">企业系统</span><h3>企业办公系统落地</h3><p>以泛微 OA 为底座，主导 CRM、固定资产、报销三条业务线上线，打通至 SAP。</p><div class="metric">资产近 1000 件 · 报销月均 100+ 单</div></article>
+    <article class="card" data-c="ent"><span class="tag ent">企业系统</span><h3>齐祥泰管家系统</h3><p>独立研发的微信小程序，搭建企业与客户之间的线上沟通及服务渠道。</p><div class="metric">累计注册用户 1000+</div></article>
+    <article class="card" data-c="ent"><span class="tag ent">企业系统</span><h3>安全题库系统</h3><p>支撑安全知识学习、题库维护与在线考试，持续迭代多年。</p><div class="metric">3000+ 题目 · 每月 300+ 人次考试</div></article>
+  </div>
+</div></section>
+
+<section id="exp"><div class="wrap">
+  <h2>工作经历</h2>
+  <p class="sub">从客户端开发，到港口信息化，再到制造业数字化。</p>
+  <ol class="tl">
+    <li><div class="when">2022.12 — 至今</div><h3>阿法拉伐设备制造（苏州）· 软件开发工程师</h3><p>搭建覆盖全员的 OA 办公平台，推动 CRM、固定资产、报销全流程上线。</p></li>
+    <li><div class="when">2018.09 — 2022.11</div><h3>正和兴港集装箱码头 · 软件开发工程师</h3><p>码头业务系统接口集成；研发齐祥泰管家小程序、一码通设备物资管理系统与安全题库系统。</p></li>
+    <li><div class="when">2015.10 — 2018.08</div><h3>太仓港数据信息中心 · 软件开发工程师</h3><p>负责监管申报系统与集卡业务系统的持续开发和运维。</p></li>
+    <li><div class="when">2012.07 — 2015.09</div><h3>上海源栈科技 · 客户端开发</h3><p>手游客户端开发与迭代，积累从需求到交付的完整经验。</p></li>
+  </ol>
+</div></section>
+
+<section id="ai"><div class="wrap">
+  <h2>我的 AI 实践</h2>
+  <p class="sub">不只是观察者。每一轮技术演进，我都亲手试过。</p>
+  <div class="flow" aria-label="AI 应用演进">
+    <span>提示词</span><i>→</i><span>工作流</span><i>→</i><span>Skill / MCP</span><i>→</i><span class="now">Agent</span>
+  </div>
+  <div class="tools">
+    <span>Claude Code</span><span>Codex</span><span>WorkBuddy</span><span>豆包</span><span>DeepSeek</span><span>Octop 个人助手</span><span>Notion 知识库</span><span>Vibe Coding</span>
+  </div>
+</div></section>
+
+<section class="contact" id="contact"><div class="wrap">
+  <h2>一起聊聊</h2>
+  <p class="lead">企业信息化、AI 落地，或者 AI 怎么帮孩子学习——都欢迎交流。</p>
+  <div class="cta"><a class="btn p" href="mailto:736086564@qq.com">736086564@qq.com</a><a class="btn" href="https://github.com/littlejcai">GitHub</a></div>
+</div></section>
+</main>
+<footer>© 2026 蔡俊荣 · 江苏太仓</footer>
+<script>
+document.querySelectorAll('.tab').forEach(t=>t.addEventListener('click',()=>{
+  document.querySelectorAll('.tab').forEach(x=>x.setAttribute('aria-selected',x===t));
+  const f=t.dataset.f;
+  document.querySelectorAll('.card').forEach(c=>c.classList.toggle('hidden',f!=='all'&&c.dataset.c!==f));
+}));
+</script>
+</body>
+</html>
