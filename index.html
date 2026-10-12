@@ -4,160 +4,225 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>蔡俊荣 · 企业信息化 × AI 应用</title>
-<meta name="description" content="蔡俊荣：十余年企业信息化建设经验，专注系统落地与 AI 应用实践。">
+<meta name="description" content="蔡俊荣：十余年软件开发经验，专注企业信息化落地、系统实施与集成，以及 AI 应用实践。">
 <style>
-:root{--t:#2C2C2B;--t2:#7D7A75;--bg:#fff;--s:#F9F8F7;--s2:#F0EFED;--b:#E6E5E3;--a:#2783DE;--as:#E5F2FC;--g:#46A171;--gs:#E8F1EC;--o:#D5803B;--os:#FBEBDE}
-@media (prefers-color-scheme:dark){:root{--t:#fff;--t2:rgba(255,255,255,.65);--bg:#191919;--s:#202020;--s2:#2a2a29;--b:rgba(255,255,255,.18);--a:#5E9FE8;--as:rgba(94,159,232,.12);--g:#72BC8F;--gs:rgba(114,188,143,.12);--o:#DE9255;--os:rgba(222,146,85,.12)}}
+:root{--t:#2C2C2B;--t2:#6F6C67;--bg:#fff;--s:#F9F8F7;--s2:#F0EFED;--b:#E6E5E3;
+--blue:#2783DE;--blue-s:#E5F2FC;--purple:#8B5CC7;--purple-s:#F3ECFA;--teal:#1F9AA8;--teal-s:#E2F4F6;
+--green:#3F9466;--green-s:#E8F1EC;--orange:#C8732F;--orange-s:#FBEBDE;--pink:#C9578A;--pink-s:#FBE9F1;
+--sh:0 1px 2px rgba(0,0,0,.05),0 8px 24px rgba(0,0,0,.06)}
+@media (prefers-color-scheme:dark){:root{--t:#fff;--t2:rgba(255,255,255,.68);--bg:#191919;--s:#202020;--s2:#2a2a29;--b:rgba(255,255,255,.16);
+--blue:#5E9FE8;--blue-s:rgba(94,159,232,.14);--purple:#B48FE0;--purple-s:rgba(180,143,224,.14);--teal:#4FB9C9;--teal-s:rgba(79,185,201,.14);
+--green:#72BC8F;--green-s:rgba(114,188,143,.14);--orange:#DE9255;--orange-s:rgba(222,146,85,.14);--pink:#DF84A8;--pink-s:rgba(223,132,168,.14);
+--sh:0 8px 24px rgba(0,0,0,.4)}}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-body{font:16px/1.6 -apple-system,BlinkMacSystemFont,"PingFang SC","Noto Sans SC","Microsoft YaHei",sans-serif;color:var(--t);background:var(--bg)}
-a{color:var(--a);text-decoration:none}a:hover{text-decoration:underline}
-a:focus-visible{outline:2px solid var(--a);outline-offset:3px;border-radius:4px}
-.wrap{max-width:1040px;margin:0 auto;padding:0 32px}
-nav{position:sticky;top:0;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--b);z-index:10}
+body{font:16px/1.6 -apple-system,BlinkMacSystemFont,"PingFang SC","Noto Sans SC","Microsoft YaHei",sans-serif;color:var(--t);background:var(--bg);overflow-x:hidden}
+a{color:var(--blue);text-decoration:none}
+a:focus-visible,button:focus-visible{outline:2px solid var(--blue);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 32px;position:relative}
+/* progress */
+#bar{position:fixed;top:0;left:0;height:3px;width:0;z-index:20;background:linear-gradient(90deg,var(--blue),var(--purple),var(--pink))}
+nav{position:sticky;top:0;background:color-mix(in srgb,var(--bg) 85%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--b);z-index:10}
 nav .wrap{display:flex;justify-content:space-between;align-items:center;height:60px}
-.logo{font-weight:700;color:var(--t)}
-nav ul{display:flex;gap:4px;list-style:none}
-nav ul a{color:var(--t2);font-size:15px;padding:10px 12px;display:inline-block}
-nav ul a:hover{color:var(--t);text-decoration:none}
-section{padding:72px 0;border-bottom:1px solid var(--b)}
-.hero{padding:96px 0 80px}
-.eyebrow{color:var(--a);font-weight:600;font-size:14px;letter-spacing:.04em;margin-bottom:16px}
-h1{font-size:44px;line-height:1.2;font-weight:700;letter-spacing:-.01em;max-width:760px}
-h1 span{color:var(--t2);font-weight:500}
+.logo{font-weight:700;color:var(--t);display:flex;align-items:center;gap:10px}
+.logo i{width:28px;height:28px;border-radius:8px;background:linear-gradient(135deg,var(--blue),var(--purple));color:#fff;font-style:normal;font-size:14px;display:grid;place-items:center}
+nav ul{display:flex;gap:2px;list-style:none}
+nav ul a{color:var(--t2);font-size:15px;padding:10px 12px;display:inline-block;border-radius:8px;transition:color .2s,background .2s}
+nav ul a:hover,nav ul a.on{color:var(--t);background:var(--s2)}
+section{padding:88px 0;position:relative}
+/* hero */
+.hero{padding:104px 0 88px;overflow:hidden}
+.blob{position:absolute;border-radius:50%;filter:blur(60px);opacity:.45;z-index:0;animation:float 14s ease-in-out infinite}
+.b1{width:420px;height:420px;background:var(--blue-s);background:radial-gradient(circle,#9cc8f3,transparent 70%);top:-120px;right:-80px}
+.b2{width:360px;height:360px;background:radial-gradient(circle,#d3b8ef,transparent 70%);top:140px;right:260px;animation-delay:-5s}
+.b3{width:300px;height:300px;background:radial-gradient(circle,#a6e0e6,transparent 70%);bottom:-120px;left:-80px;animation-delay:-9s}
+@media (prefers-color-scheme:dark){.blob{opacity:.22}}
+@keyframes float{0%,100%{transform:translate(0,0) scale(1)}33%{transform:translate(30px,-24px) scale(1.06)}66%{transform:translate(-24px,18px) scale(.96)}}
+.hero .wrap{z-index:1}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;color:var(--purple);background:var(--purple-s);font-weight:600;font-size:14px;padding:6px 12px;border-radius:8px;margin-bottom:20px}
+.eyebrow::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--purple);animation:pulse 2s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 color-mix(in srgb,var(--purple) 50%,transparent)}70%{box-shadow:0 0 0 8px transparent}100%{box-shadow:0 0 0 0 transparent}}
+h1{font-size:48px;line-height:1.2;font-weight:700;letter-spacing:-.01em;max-width:780px}
+.grad{background:linear-gradient(90deg,var(--blue),var(--purple),var(--teal),var(--blue));background-size:300% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shine 8s linear infinite}
+@keyframes shine{to{background-position:300% 0}}
 .lead{font-size:18px;color:var(--t2);max-width:680px;margin-top:20px}
 .cta{display:flex;gap:12px;margin-top:32px;flex-wrap:wrap}
-.btn{display:inline-flex;align-items:center;min-height:44px;padding:0 20px;border-radius:8px;font-weight:600;font-size:15px;border:1px solid var(--b);color:var(--t)}
-.btn.p{background:var(--t);color:var(--bg);border-color:var(--t)}
-.btn:hover{text-decoration:none;opacity:.88}
+.btn{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 20px;border-radius:8px;font-weight:600;font-size:15px;border:1px solid var(--b);color:var(--t);background:var(--bg);transition:transform .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-2px);box-shadow:var(--sh)}
+.btn.p{background:linear-gradient(135deg,var(--blue),var(--purple));color:#fff;border:none}
+.btn span{transition:transform .2s}.btn:hover span{transform:translateX(3px)}
 .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:64px}
-.stat{padding:20px;background:var(--s);border-radius:12px}
-.stat b{display:block;font-size:28px;line-height:1.2}
+.stat{padding:20px;border-radius:12px;background:var(--c-s);border:1px solid color-mix(in srgb,var(--c) 18%,transparent)}
+.stat b{display:block;font-size:30px;line-height:1.2;color:var(--c)}
 .stat span{font-size:14px;color:var(--t2)}
-h2{font-size:28px;line-height:1.3;margin-bottom:8px}
+.c-blue{--c:var(--blue);--c-s:var(--blue-s)}.c-purple{--c:var(--purple);--c-s:var(--purple-s)}.c-teal{--c:var(--teal);--c-s:var(--teal-s)}
+.c-green{--c:var(--green);--c-s:var(--green-s)}.c-orange{--c:var(--orange);--c-s:var(--orange-s)}.c-pink{--c:var(--pink);--c-s:var(--pink-s)}
+h2{font-size:30px;line-height:1.3;margin-bottom:8px}
 .sub{color:var(--t2);margin-bottom:40px}
+.alt{background:var(--s)}
+/* skills */
 .skills{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
-.skill{border:1px solid var(--b);border-radius:12px;padding:24px}
-.skill h3{font-size:17px;margin-bottom:8px}
+.skill{background:var(--bg);border:1px solid var(--b);border-radius:12px;padding:24px;display:flex;gap:16px;transition:transform .25s,box-shadow .25s,border-color .25s}
+.skill:hover{transform:translateY(-4px);box-shadow:var(--sh);border-color:color-mix(in srgb,var(--c) 40%,transparent)}
+.ico{flex:none;width:44px;height:44px;border-radius:10px;background:var(--c-s);color:var(--c);display:grid;place-items:center;font-weight:700;font-size:18px}
+.skill h3{font-size:17px;margin-bottom:6px}
 .skill p{color:var(--t2);font-size:15px}
-.tabs{display:flex;gap:8px;margin-bottom:24px}
-.tab{min-height:44px;padding:0 16px;border-radius:8px;border:1px solid var(--b);background:var(--bg);color:var(--t2);font:inherit;font-size:15px;cursor:pointer}
+/* projects */
+.tabs{display:flex;gap:8px;margin-bottom:24px;flex-wrap:wrap}
+.tab{min-height:44px;padding:0 16px;border-radius:8px;border:1px solid var(--b);background:var(--bg);color:var(--t2);font:inherit;font-size:15px;cursor:pointer;transition:all .2s}
+.tab:hover{color:var(--t)}
 .tab[aria-selected=true]{background:var(--t);color:var(--bg);border-color:var(--t)}
-.tab:focus-visible{outline:2px solid var(--a);outline-offset:2px}
 .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-.card{background:var(--s);border-radius:12px;padding:24px;display:flex;flex-direction:column;gap:12px}
+.card{position:relative;background:var(--bg);border:1px solid var(--b);border-radius:12px;padding:24px;display:flex;flex-direction:column;gap:12px;overflow:hidden;transition:transform .25s,box-shadow .25s,opacity .3s}
+.card::before{content:"";position:absolute;inset:0 0 auto 0;height:4px;background:linear-gradient(90deg,var(--c),color-mix(in srgb,var(--c) 30%,var(--purple)))}
+.card:hover{transform:translateY(-6px);box-shadow:var(--sh)}
 .card h3{font-size:18px;line-height:1.35}
 .card p{font-size:15px;color:var(--t2);flex:1}
-.tag{align-self:flex-start;font-size:13px;font-weight:600;padding:2px 8px;border-radius:6px}
-.tag.ai{background:var(--as);color:var(--a)}.tag.ent{background:var(--gs);color:var(--g)}.tag.wip{background:var(--os);color:var(--o)}
+.tag{align-self:flex-start;font-size:13px;font-weight:600;padding:2px 8px;border-radius:6px;background:var(--c-s);color:var(--c)}
+.tag.live::before{content:"● ";animation:blink 1.6s infinite}
+@keyframes blink{50%{opacity:.3}}
 .metric{font-size:14px;font-weight:600;color:var(--t);border-top:1px solid var(--b);padding-top:12px}
-.hidden{display:none}
-.tl{list-style:none;border-left:2px solid var(--b);margin-left:6px}
-.tl li{position:relative;padding:0 0 32px 28px}
+.metric a{color:var(--c)}
+.card.hide{display:none}
+.card.pop{animation:pop .35s ease}
+@keyframes pop{from{opacity:0;transform:translateY(10px) scale(.98)}to{opacity:1;transform:none}}
+/* timeline */
+.tl{list-style:none;position:relative;margin-left:6px}
+.tl::before{content:"";position:absolute;left:0;top:6px;bottom:6px;width:2px;background:var(--b)}
+.tl::after{content:"";position:absolute;left:0;top:6px;width:2px;height:var(--p,0%);max-height:calc(100% - 12px);background:linear-gradient(var(--blue),var(--purple),var(--teal));transition:height .2s}
+.tl li{position:relative;padding:0 0 36px 32px}
 .tl li:last-child{padding-bottom:0}
-.tl li::before{content:"";position:absolute;left:-7px;top:7px;width:12px;height:12px;border-radius:50%;background:var(--bg);border:2px solid var(--a)}
-.tl .when{font-size:14px;color:var(--t2)}
+.tl li::before{content:"";position:absolute;left:-6px;top:6px;width:14px;height:14px;border-radius:50%;background:var(--bg);border:3px solid var(--c);z-index:1}
+.tl .when{font-size:14px;font-weight:600;color:var(--c)}
 .tl h3{font-size:17px;margin:2px 0 4px}
-.tl p{font-size:15px;color:var(--t2);max-width:700px}
+.tl p{font-size:15px;color:var(--t2);max-width:720px}
+/* ai */
 .flow{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:32px}
-.flow span{padding:8px 14px;border:1px solid var(--b);border-radius:8px;font-size:15px}
-.flow i{color:var(--t2);font-style:normal}
-.flow span.now{border-color:var(--a);color:var(--a);font-weight:600}
-.tools{display:flex;flex-wrap:wrap;gap:8px}
-.tools span{background:var(--s2);padding:6px 12px;border-radius:6px;font-size:14px}
-.contact{text-align:center;border-bottom:none;padding:88px 0}
+.flow span{padding:10px 16px;border-radius:8px;font-size:15px;font-weight:600;background:var(--c-s);color:var(--c)}
+.flow i{color:var(--t2);font-style:normal;animation:nudge 1.6s ease-in-out infinite}
+@keyframes nudge{50%{transform:translateX(4px)}}
+.tools{display:flex;flex-wrap:wrap;gap:10px}
+.tools span{background:var(--bg);border:1px solid var(--b);padding:8px 14px;border-radius:8px;font-size:14px;transition:transform .2s,border-color .2s,color .2s}
+.tools span:hover{transform:translateY(-3px);border-color:var(--purple);color:var(--purple)}
+/* contact */
+.contact{text-align:center;padding:96px 0;overflow:hidden}
+.contact::before{content:"";position:absolute;inset:0;background:linear-gradient(135deg,var(--blue-s),var(--purple-s),var(--teal-s));z-index:0}
+.contact .wrap{z-index:1}
 .contact .lead{margin:16px auto 32px}
 .contact .cta{justify-content:center}
 footer{text-align:center;color:var(--t2);font-size:14px;padding:24px 0 40px}
+/* reveal */
+.js .rv{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease;transition-delay:var(--d,0s)}
+.js .rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}.js .rv{opacity:1;transform:none}}
 @media (max-width:860px){.grid{grid-template-columns:repeat(2,1fr)}.stats{grid-template-columns:repeat(2,1fr)}}
-@media (max-width:600px){.wrap{padding:0 20px}nav ul{display:none}h1{font-size:32px}.lead{font-size:17px}.hero{padding:64px 0 56px}section{padding:56px 0}.grid,.skills{grid-template-columns:1fr}.stats{margin-top:48px;gap:12px}.stat{padding:16px}.stat b{font-size:24px}h2{font-size:24px}}
+@media (max-width:600px){.wrap{padding:0 20px}nav ul{display:none}h1{font-size:30px}.lead{font-size:17px}.hero{padding:64px 0 56px}section{padding:60px 0}.grid,.skills{grid-template-columns:1fr}.stats{margin-top:48px;gap:12px}.stat{padding:16px}.stat b{font-size:26px}h2{font-size:25px}.b2{display:none}}
 </style>
 </head>
 <body>
+<div id="bar"></div>
 <nav aria-label="主导航"><div class="wrap">
-  <a class="logo" href="#top">蔡俊荣</a>
+  <a class="logo" href="#top"><i>蔡</i>蔡俊荣</a>
   <ul><li><a href="#about">能力</a></li><li><a href="#projects">项目</a></li><li><a href="#exp">经历</a></li><li><a href="#ai">AI 实践</a></li><li><a href="#contact">联系</a></li></ul>
 </div></nav>
 
 <main id="top">
-<section class="hero"><div class="wrap">
-  <p class="eyebrow">企业信息化 × AI 应用</p>
-  <h1>把技术方案，落成<br>稳定可用的业务系统。</h1>
-  <p class="lead">我是蔡俊荣，十余年企业信息化建设经验，覆盖港口物流与设备制造。现在，我把同样的落地能力用在 AI 应用上——从企业知识库问答，到帮孩子整理错题的学习产品。</p>
-  <div class="cta"><a class="btn p" href="#projects">看看项目</a><a class="btn" href="mailto:736086564@qq.com">发邮件联系</a></div>
+<section class="hero">
+  <div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div>
+  <div class="wrap">
+  <p class="eyebrow rv">企业信息化落地｜系统实施与集成｜AI 应用实践</p>
+  <h1 class="rv" style="--d:.08s">把技术方案，落成<br><span class="grad">真正用起来的业务系统。</span></h1>
+  <p class="lead rv" style="--d:.16s">我是蔡俊荣，十余年软件开发经验，近 11 年在港口物流、设备制造企业做信息化建设。现在也把同样的落地能力用在 AI 上：独立开发并上线了学习产品「问隅爱学」，也在用 WeKnora 搭建企业知识库问答。</p>
+  <div class="cta rv" style="--d:.24s"><a class="btn p" href="#projects">看看项目 <span>→</span></a><a class="btn" href="mailto:736086564@qq.com">发邮件联系</a></div>
   <div class="stats">
-    <div class="stat"><b>10+ 年</b><span>企业信息化经验</span></div>
-    <div class="stat"><b>200 人</b><span>OA 平台覆盖全员</span></div>
-    <div class="stat"><b>1000+</b><span>小程序注册用户</span></div>
-    <div class="stat"><b>3000+</b><span>安全题库题目沉淀</span></div>
+    <div class="stat c-blue rv" style="--d:.1s"><b data-n="10" data-s="+ 年">10+ 年</b><span>软件开发经验</span></div>
+    <div class="stat c-purple rv" style="--d:.18s"><b data-n="200" data-s=" 人">200 人</b><span>OA 平台覆盖全员</span></div>
+    <div class="stat c-teal rv" style="--d:.26s"><b data-n="1000" data-s="+">1000+</b><span>小程序注册用户</span></div>
+    <div class="stat c-orange rv" style="--d:.34s"><b data-n="3000" data-s="+">3000+</b><span>安全题库题目</span></div>
   </div>
 </div></section>
 
-<section id="about"><div class="wrap">
-  <h2>我能做什么</h2>
-  <p class="sub">连接业务需求、管理目标与技术方案，让系统真正用起来。</p>
+<section id="about" class="alt"><div class="wrap">
+  <h2 class="rv">我能做什么</h2>
+  <p class="sub rv">先和业务部门把流程理清楚，再让系统真正用起来。</p>
   <div class="skills">
-    <div class="skill"><h3>企业信息化落地</h3><p>需求梳理、方案设计、项目实施、系统集成、上线运维与持续优化，经历自研系统到成熟产品二开的完整链路。</p></div>
-    <div class="skill"><h3>技术与平台</h3><p>Java / Python / Node.js / Vue，Oracle / SQL Server，泛微 OA 实施与二次开发，微信小程序。</p></div>
-    <div class="skill"><h3>跨部门协同</h3><p>与财务、销售、资产、安全等业务部门共建流程，把分散的线下事务变成可追踪的线上闭环。</p></div>
-    <div class="skill"><h3>AI 应用实践</h3><p>用 Claude Code、Codex 等工具辅助开发；搭建知识库、AI 工作流与 Skill，探索 Agent 在工作与家庭中的真实用法。</p></div>
+    <div class="skill c-blue rv"><div class="ico">企</div><div><h3>企业信息化</h3><p>需求梳理、方案设计、项目实施、系统集成、上线运维。既做过自研系统，也做过泛微 OA 等成熟产品的实施和二次开发。</p></div></div>
+    <div class="skill c-teal rv" style="--d:.08s"><div class="ico">技</div><div><h3>技术栈</h3><p>Java / Python / Node.js / Vue，Oracle / SQL Server，微信小程序，泛微 OA 实施与二次开发。</p></div></div>
+    <div class="skill c-green rv" style="--d:.16s"><div class="ico">协</div><div><h3>业务沟通</h3><p>能和财务、销售、资产、安全等部门一起梳理流程，推动跨部门项目上线。</p></div></div>
+    <div class="skill c-purple rv" style="--d:.24s"><div class="ico">AI</div><div><h3>AI 工具</h3><p>Claude Code、Codex、WorkBuddy、豆包等，用于编码、写文档和日常办公。</p></div></div>
   </div>
 </div></section>
 
 <section id="projects"><div class="wrap">
-  <h2>精选项目</h2>
-  <p class="sub">企业系统看结果，AI 项目看思考。</p>
-  <div class="tabs" role="tablist" aria-label="项目分类">
+  <h2 class="rv">项目实践</h2>
+  <p class="sub rv">AI 项目看思路，企业系统看结果。</p>
+  <div class="tabs rv" role="tablist" aria-label="项目分类">
     <button class="tab" role="tab" aria-selected="true" data-f="all">全部</button>
     <button class="tab" role="tab" aria-selected="false" data-f="ai">AI 实践</button>
     <button class="tab" role="tab" aria-selected="false" data-f="ent">企业系统</button>
   </div>
   <div class="grid">
-    <article class="card" data-c="ai"><span class="tag wip">验证中</span><h3>问隅爱学 · 小学学习 AI 产品</h3><p>从孩子的真实错题出发，设计“预习 → 理解 → 错题 → 巩固 → 复盘”闭环：错因识别、前置知识链回溯、变式练习。</p><div class="metric">Next.js · TypeScript · PWA · LLM</div></article>
-    <article class="card" data-c="ai"><span class="tag ai">AI 实践</span><h3>企业知识库问答</h3><p>基于大模型让员工自助获取制度、流程与系统使用知识，借助 AI 编程工具快速迭代原型。</p><div class="metric">原型验证阶段</div></article>
-    <article class="card" data-c="ai"><span class="tag ai">AI 实践</span><h3>AI 小作品</h3><p>诗画同源古诗词 H5、TeamAi 桌面客户端、Skill 注册管理，以及你正在看的这个官网——都由我借助 AI 独立完成并开源。</p><div class="metric"><a href="https://github.com/littlejcai">GitHub · littlejcai →</a></div></article>
-    <article class="card" data-c="ent"><span class="tag ent">企业系统</span><h3>企业办公系统落地</h3><p>以泛微 OA 为底座，主导 CRM、固定资产、报销三条业务线上线，打通至 SAP。</p><div class="metric">资产近 1000 件 · 报销月均 100+ 单</div></article>
-    <article class="card" data-c="ent"><span class="tag ent">企业系统</span><h3>齐祥泰管家系统</h3><p>独立研发的微信小程序，搭建企业与客户之间的线上沟通及服务渠道。</p><div class="metric">累计注册用户 1000+</div></article>
-    <article class="card" data-c="ent"><span class="tag ent">企业系统</span><h3>安全题库系统</h3><p>支撑安全知识学习、题库维护与在线考试，持续迭代多年。</p><div class="metric">3000+ 题目 · 每月 300+ 人次考试</div></article>
+    <article class="card c-purple rv" data-c="ai"><span class="tag live">已上线</span><h3>问隅爱学 · 小学学习产品</h3><p>从孩子的真实错题出发，先找出错因和缺失的前置知识点，再生成少量针对性练习。独立设计开发，Web 端与微信小程序均已上线。</p><div class="metric"><a href="https://wenyu.caistudio.cn">wenyu.caistudio.cn →</a></div></article>
+    <article class="card c-blue rv" data-c="ai" style="--d:.08s"><span class="tag">原型验证</span><h3>企业知识库问答</h3><p>基于腾讯开源的 RAG 框架 WeKnora 搭建，导入制度、流程等文档，员工可直接查询制度、流程和系统操作说明。</p><div class="metric">WeKnora · RAG</div></article>
+    <article class="card c-teal rv" data-c="ai" style="--d:.16s"><span class="tag">AI 实践</span><h3>个人官网</h3><p>就是你正在看的这个网站。用 AI 编程工具完成内容规划、页面设计和前端开发，适配手机、桌面和深色模式。</p><div class="metric">GitHub Pages</div></article>
+    <article class="card c-green rv" data-c="ent"><span class="tag">企业系统</span><h3>企业办公系统落地</h3><p>以泛微 OA 为平台搭建全员办公流程，上线 CRM、固定资产、报销三条业务流程，报销数据导入 SAP。</p><div class="metric">CRM 月均 30+ 单 · 资产近 1000 件 · 报销月均 100+ 单</div></article>
+    <article class="card c-orange rv" data-c="ent" style="--d:.08s"><span class="tag">企业系统</span><h3>齐祥泰管家系统</h3><p>微信小程序，为企业和客户提供线上沟通与服务入口。负责需求梳理、开发、上线和后续迭代。</p><div class="metric">累计注册用户 1000+</div></article>
+    <article class="card c-pink rv" data-c="ent" style="--d:.16s"><span class="tag">企业系统</span><h3>安全题库系统</h3><p>用于员工安全知识学习、题库维护和在线考试，负责建设并持续迭代。</p><div class="metric">3000+ 题目 · 每月 300+ 人次考试</div></article>
   </div>
 </div></section>
 
-<section id="exp"><div class="wrap">
-  <h2>工作经历</h2>
-  <p class="sub">从客户端开发，到港口信息化，再到制造业数字化。</p>
-  <ol class="tl">
-    <li><div class="when">2022.12 — 至今</div><h3>阿法拉伐设备制造（苏州）· 软件开发工程师</h3><p>搭建覆盖全员的 OA 办公平台，推动 CRM、固定资产、报销全流程上线。</p></li>
-    <li><div class="when">2018.09 — 2022.11</div><h3>正和兴港集装箱码头 · 软件开发工程师</h3><p>码头业务系统接口集成；研发齐祥泰管家小程序、一码通设备物资管理系统与安全题库系统。</p></li>
-    <li><div class="when">2015.10 — 2018.08</div><h3>太仓港数据信息中心 · 软件开发工程师</h3><p>负责监管申报系统与集卡业务系统的持续开发和运维。</p></li>
-    <li><div class="when">2012.07 — 2015.09</div><h3>上海源栈科技 · 客户端开发</h3><p>手游客户端开发与迭代，积累从需求到交付的完整经验。</p></li>
+<section id="exp" class="alt"><div class="wrap">
+  <h2 class="rv">工作经历</h2>
+  <p class="sub rv">从客户端开发，到港口信息化，再到制造业信息化。</p>
+  <ol class="tl" id="tl">
+    <li class="c-blue rv"><div class="when">2022.12 — 至今</div><h3>阿法拉伐设备制造（苏州）有限公司 · 软件开发工程师</h3><p>负责公司信息化系统的建设与运维，以泛微 OA 为平台承接全员约 200 人的审批与协同需求；主导 CRM、固定资产、报销三条业务流程上线，报销数据对接 SAP。</p></li>
+    <li class="c-purple rv"><div class="when">2018.09 — 2022.11</div><h3>正和兴港集装箱码头有限公司 · 软件开发工程师</h3><p>负责码头各业务系统之间的接口对接与集成，以及泛微 OA 的实施和运维；自主开发一码通系统（纳管设备及物资 1000+ 件），开发齐祥泰管家系统和安全题库系统。</p></li>
+    <li class="c-teal rv"><div class="when">2015.10 — 2018.08</div><h3>太仓港数据信息中心 · 软件开发工程师</h3><p>参与港口信息化系统的开发与维护，负责监管部门申报系统的开发运维，改进集卡业务系统。</p></li>
+    <li class="c-orange rv"><div class="when">2012.07 — 2015.09</div><h3>上海源栈科技有限公司 · 客户端开发</h3><p>负责手游客户端的开发与功能迭代，完整经历从需求分析到产品交付的过程。</p></li>
   </ol>
 </div></section>
 
 <section id="ai"><div class="wrap">
-  <h2>我的 AI 实践</h2>
-  <p class="sub">不只是观察者。每一轮技术演进，我都亲手试过。</p>
-  <div class="flow" aria-label="AI 应用演进">
-    <span>提示词</span><i>→</i><span>工作流</span><i>→</i><span>Skill / MCP</span><i>→</i><span class="now">Agent</span>
+  <h2 class="rv">我的 AI 实践</h2>
+  <p class="sub rv">工作和生活里都在用：开发产品、管理知识，也帮孩子整理错题、辅导写作。</p>
+  <div class="flow rv" aria-label="AI 使用演进">
+    <span class="c-blue">提示词</span><i>→</i><span class="c-teal">工作流</span><i>→</i><span class="c-purple">Skill / MCP</span><i>→</i><span class="c-pink">Agent</span>
   </div>
-  <div class="tools">
-    <span>Claude Code</span><span>Codex</span><span>WorkBuddy</span><span>豆包</span><span>DeepSeek</span><span>Octop 个人助手</span><span>Notion 知识库</span><span>Vibe Coding</span>
+  <div class="tools rv">
+    <span>Claude Code</span><span>Codex</span><span>WorkBuddy</span><span>豆包</span><span>ChatGPT</span><span>Get笔记</span><span>Notion 知识库</span><span>Octop 个人助手</span><span>WeKnora</span>
   </div>
 </div></section>
 
 <section class="contact" id="contact"><div class="wrap">
-  <h2>一起聊聊</h2>
-  <p class="lead">企业信息化、AI 落地，或者 AI 怎么帮孩子学习——都欢迎交流。</p>
-  <div class="cta"><a class="btn p" href="mailto:736086564@qq.com">736086564@qq.com</a><a class="btn" href="https://github.com/littlejcai">GitHub</a></div>
+  <h2 class="rv">一起聊聊</h2>
+  <p class="lead rv">企业信息化、AI 落地，或者 AI 怎么帮孩子学习，都欢迎交流。</p>
+  <div class="cta rv"><a class="btn p" href="mailto:736086564@qq.com">736086564@qq.com</a><a class="btn" href="https://github.com/littlejcai">GitHub</a></div>
 </div></section>
 </main>
 <footer>© 2026 蔡俊荣 · 江苏太仓</footer>
 <script>
-document.querySelectorAll('.tab').forEach(t=>t.addEventListener('click',()=>{
-  document.querySelectorAll('.tab').forEach(x=>x.setAttribute('aria-selected',x===t));
-  const f=t.dataset.f;
-  document.querySelectorAll('.card').forEach(c=>c.classList.toggle('hidden',f!=='all'&&c.dataset.c!==f));
-}));
+(function(){
+var rm=matchMedia('(prefers-reduced-motion: reduce)').matches;
+document.documentElement.classList.add('js');
+// reveal
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);if(e.target.querySelector('[data-n]'))count(e.target.querySelector('[data-n]'))}})},{threshold:.12});
+document.querySelectorAll('.rv').forEach(function(el){io.observe(el)});
+// count-up
+function count(el){if(rm||el.done)return;el.done=1;var n=+el.dataset.n,s=el.dataset.s,t0=performance.now();
+ (function f(t){var p=Math.min((t-t0)/1200,1),v=Math.round(n*(1-Math.pow(1-p,3)));el.textContent=v+s;if(p<1)requestAnimationFrame(f)})(t0)}
+// tabs
+document.querySelectorAll('.tab').forEach(function(t){t.addEventListener('click',function(){
+ document.querySelectorAll('.tab').forEach(function(x){x.setAttribute('aria-selected',x===t)});
+ var f=t.dataset.f;document.querySelectorAll('.card').forEach(function(c){var show=f==='all'||c.dataset.c===f;c.classList.toggle('hide',!show);c.classList.remove('pop');if(show){void c.offsetWidth;c.classList.add('pop')}});
+})});
+// scroll progress + timeline + nav highlight
+var bar=document.getElementById('bar'),tl=document.getElementById('tl'),links=document.querySelectorAll('nav ul a');
+function onScroll(){var h=document.documentElement,max=h.scrollHeight-h.clientHeight;bar.style.width=(max?h.scrollTop/max*100:0)+'%';
+ var r=tl.getBoundingClientRect(),p=Math.max(0,Math.min(1,(innerHeight*.7-r.top)/r.height));tl.style.setProperty('--p',p*100+'%');
+ var cur='';document.querySelectorAll('section[id]').forEach(function(s){if(s.getBoundingClientRect().top<120)cur=s.id});
+ links.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+cur)})}
+addEventListener('scroll',onScroll,{passive:true});onScroll();
+})();
 </script>
 </body>
 </html>
